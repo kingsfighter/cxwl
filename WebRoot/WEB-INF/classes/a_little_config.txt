@@ -1,0 +1,7 @@
+jdbcUrl = jdbc:mysql://127.0.0.1/cxwl?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = dave
+password = 5253232
+devMode = true
+
+front.case.list.page.size=2
+front.news.list.page.size=3

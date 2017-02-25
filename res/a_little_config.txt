@@ -3,5 +3,9 @@ user = dave
 password = 5253232
 devMode = true
 
-front.case.list.page.size=2
-front.news.list.page.size=3
+front.case.list.page.size=20
+front.news.list.page.size=10
+
+#index show list config
+front.index.case.list.page=10
+front.index.news.list.page=8

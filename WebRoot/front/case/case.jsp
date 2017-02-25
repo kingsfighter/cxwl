@@ -31,11 +31,11 @@
   <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
-  <div class="logo"><h1><a href="index.html" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
+  <div class="logo"><h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
   <div class="fanhui">
-      <a href="/front/"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
-      <a href="/front/news/">新闻资讯</a>
-      <a href="/front/case/">精彩案例</a>
+      <a href="../"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
+      <a href="../news/">新闻资讯</a>
+      <a href="../case/">精彩案例</a>
   </div>
 <div class="banner banner1">
   <h3><span id="gd-al1"><%=totalCount %></span>余个真实案例，<span id="gd-al2">9</span>年工作经验，<span>品</span>质保证！</h3>
@@ -50,7 +50,7 @@
 	if(-1 == caseType){
 		out.write("class='cur'");
 	}
- %>><a href="/front/case/">全部（<%=totalCount %>）</a></span>
+ %>><a href="../case/">全部（<%=totalCount %>）</a></span>
 <span  <%
 	if(1 == caseType){
 		out.write("class='cur'");
@@ -84,7 +84,16 @@
   </div>
 </div>
 <div class="page">
-<a href="javascript:void(0);"onclick="toPage(<%=currentPage-1 %>)"><span><上一页</span></a>
+
+<%
+	if(currentPage <= 1){
+		out.write("<a href='javascript:void(0);'><span><上一页</span></a>");
+	}else {
+		out.write("<a href='javascript:void(0);'onclick='toPage("+ (currentPage-1) +")'><span><上一页</span></a>");
+	}
+ %>
+
+
 <% 
 	String str = "";
 	if(totalPage <= pageShowSize) {
@@ -130,7 +139,19 @@
 		}
 	}
 %>
-<a href="javascript:void(0);"onclick="toPage(<%=currentPage+1 %>)"><span>下一页></span></a>
+
+
+<!-- <a href="javascript:void(0);"onclick="toPage(<%=currentPage+1 %>)"><span>下一页></span></a> -->
+
+<%
+	if(currentPage >= totalPage){
+		out.write("<a href='javascript:void(0);'><span>下一页></span></a>");
+	}else {
+		out.write("<a href='javascript:void(0);'onclick='toPage("+ (currentPage+1) +")'><span>下一页></span></a>");
+	}
+ %>
+
+
 </div>
 <script type="text/javascript">
 	//分页
@@ -177,7 +198,7 @@
 				obj_content : ".list-anli ul"
 			});
 			// 数字变动
-			var demo = new CountUp("gd-al1", 0, 10, 0, 2.5, options);
+			var demo = new CountUp("gd-al1", 0, <%=totalCount %>, 0, 2.5, options);
 			demo.start();
 			var demo1 = new CountUp("gd-al2", 0, 9, 0, 4.5, options);
 			demo1.start();

@@ -25,11 +25,11 @@
   <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
-  <div class="logo"><h1><a href="/front/" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
+  <div class="logo"><h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
   <div class="fanhui">
-      <a href="/front/"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
-      <a href="/front/news">新闻资讯</a>
-      <a href="/front/case/">精彩案例</a>
+      <a href="../"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
+      <a href="../news/">新闻资讯</a>
+      <a href="../case/">精彩案例</a>
   </div>
 <div class="banner banner1 banner2">
   <!-- <h3><span id="gd-al1">10</span>余个真实案例，<span id="gd-al2">9</span>年工作经验，<span>品</span>质保证！</h3> -->
@@ -88,7 +88,7 @@
 		        </div>
 		        <div class="time">
 		           <h4><%=c.get(Calendar.DATE) %></h4>
-		          <p><%=c.get(Calendar.YEAR) %>-<%=c.get(Calendar.MONTH) %></p>
+		          <p><%=c.get(Calendar.YEAR) %>-<%=c.get(Calendar.MONTH) + 1 %></p>
 		        </div>
 		        </a>
 		     </li>
@@ -100,7 +100,19 @@
   </div>
 </div>
 <div class="page">
-  <a href="javascript:void(0);"onclick="toPage(<%=currentPage-1 %>)"><span><上一页</span></a>
+
+
+<!--   <a href="javascript:void(0);"onclick="toPage(<%=currentPage-1 %>)"><span><上一页</span></a> -->
+<%
+	if(currentPage <= 1){
+		out.write("<a href='javascript:void(0);'><span><上一页</span></a>");
+	}else {
+		out.write("<a href='javascript:void(0);'onclick='toPage("+ (currentPage-1) +")'><span><上一页</span></a>");
+	}
+ %>
+
+  
+  
 <% 
 	String str = "";
 	if(totalPage <= pageShowSize) {
@@ -146,7 +158,17 @@
 		}
 	}
 %>
-<a href="javascript:void(0);"onclick="toPage(<%=currentPage+1 %>)"><span>下一页></span></a>
+
+
+<!-- <a href="javascript:void(0);"onclick="toPage(<%=currentPage+1 %>)"><span>下一页></span></a> -->
+<%
+	if(currentPage >= totalPage){
+		out.write("<a href='javascript:void(0);'><span>下一页></span></a>");
+	}else {
+		out.write("<a href='javascript:void(0);'onclick='toPage("+ (currentPage+1) +")'><span>下一页></span></a>");
+	}
+ %>
+
 </div>
 <script type="text/javascript">
 	//分页

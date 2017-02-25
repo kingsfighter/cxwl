@@ -40,6 +40,10 @@ public class FrontNewsController extends Controller {
 	public void detail(){
 		int id = getParaToInt(ID_STR);
 		News c = News.dao.findById(id);
+		//访问新闻，新闻阅读次数加1
+		c.setReadCount(c.getReadCount() + 1);
+		c.update();
+		
 		setAttr("news",c);
 		render("news-details.jsp");
 	}

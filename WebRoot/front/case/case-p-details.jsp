@@ -18,11 +18,11 @@
   <link rel="stylesheet" href="../style/index.css">
 </head>
 <body class="pc" style="background-image: url(../images/previewbg.jpg);">
- <div class="logo"><h1><a href="/front/" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
+ <div class="logo"><h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
     <div class="fanhui">
-      <a href="/front/"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
-      <a href="/front/news.html">新闻资讯</a>
-      <a href="/front/case/">精彩案例</a>
+      <a href="../"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
+      <a href="../news/">新闻资讯</a>
+      <a href="../case/">精彩案例</a>
   	</div>
   <h2 class="title-keywords"><%=c.getTitle() %></h2>
   <div class="pc-bg">

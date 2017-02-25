@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*,com.demo.common.model.*,com.jfinal.plugin.activerecord.Page;" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -69,66 +72,19 @@ var _hmt = _hmt || [];
   <h2>部分案例</h2>
   <div class="list">
     <ul>
-      <li>
-      <a href="case-p-details.html" target="_blank">
-      <div class="pic"><img src="images/anli1.jpg" alt=""></div>
-      <p>创翔网络官网建设</p>
-      </a>
-      </li>
-      <li>
-      <a href="case-t-details.html" target="_blank">
-      <div class="pic"><img src="images/anli4.jpg" alt=""></div>
-      <p>手机页面国庆大促销</p>
-      </a>
-      </li>
-      <li>
-      <a href="case-t-details1.html" target="_blank">
-      <div class="pic"><img src="images/anli2.jpg" alt=""></div>
-      <p>新疆省电信天翼献爱心活动</p>
-      </a>
-      </li>
-      <li>
-      <a href="case-t-details.html" target="_blank">
-      <div class="pic"><img src="images/anli4.jpg" alt=""></div>
-      <p>国庆大促销</p>
-      </a>
-      </li>
-      <li>
-      <a href="" target="_blank">
-       <div class="pic"><img src="images/anli4.jpg" alt=""></div>
-      <p>案例正在上传中，敬请期待</p>
-      </a>
-      </li>
-      <li>
-      <a href="" target="_blank">
-       <div class="pic"><img src="images/anli5.jpg" alt=""></div>
-      <p>案例正在上传中，敬请期待</p>
-      </a>
-      </li>
-      <li>
-      <a href="" target="_blank">
-       <div class="pic"><img src="images/anli6.jpg" alt=""></div>
-      <p>案例正在上传中，敬请期待</p>
-      </a>
-      </li>
-      <li>
-      <a href="" target="_blank">
-       <div class="pic"><img src="images/anli7.jpg" alt=""></div>
-      <p>案例正在上传中，敬请期待</p>
-      </a>
-      </li>
-      <li>
-      <a href="" target="_blank">
-       <div class="pic"><img src="images/anli8.jpg" alt=""></div>
-      <p>案例正在上传中，敬请期待</p>
-      </a>
-      </li>
-      <li>
-      <a href="" target="_blank">
-       <div class="pic"><img src="images/anli10.jpg" alt=""></div>
-      <p>案例正在上传中，敬请期待</p>
-      </a>
-      </li>
+	    <%
+	    Page<Case> cases = (Page<Case>)request.getAttribute("cases");
+	  	for(Case c : cases.getList()) {
+	  		%>
+	  		<li>
+		      <a href="case/detail?id=<%=c.getId() %>" target="_blank">
+		      <div class="pic"><img src="<%=c.getListPic1Path() %>" alt="<%=c.getTitle() %>"></div>
+		      <p><%=c.getTitle() %></p>
+		      </a>
+		     </li>
+	  		<%
+	  	}
+	   %>
     </ul>
   </div>
   <!-- 此处链接固定地址为case -->
@@ -258,12 +214,19 @@ var _hmt = _hmt || [];
   </div>
   <div class="list list1">
     <ul>
-      <li>
-      <a href="news-details1.html" target="_blank">网站建设流程是什么？3分钟全学会，带走不用谢！<i><img src="images/ico-hot.gif" alt=""></i></a>
-      </li>
-      <li>
-      <a href="news-details.html" target="_blank">从西安网站建设入手，能否开启从0到让自己的人生赚的盆满钵满？<i><img src="images/ico-hot.gif" alt=""></i></a>
-      </li>
+    
+     	<%
+     	Page<News> newses = (Page<News>)request.getAttribute("news");
+       	for(News news : newses.getList()) {
+       		%>
+<!--        			 <a href="news-details1.html" target="_blank">网站建设流程是什么？3分钟全学会，带走不用谢！<i><img src="images/ico-hot.gif" alt=""></i></a> -->
+       		<li>
+		      		<a href="news/detail?id=<%=news.getId() %>" target="_blank"><%=news.getListTitle() %><i><img src="images/ico-hot.gif" alt=""></i></a>
+		     </li>
+       		
+       		<%
+       	}
+       	%>
      
     </ul>
   </div>

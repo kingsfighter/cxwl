@@ -21,15 +21,15 @@
 <body>
   <div class="logo">
     <h1>
-      <a href="/front/" title="创翔网站建设" alt="创翔网站建设">
+      <a href="../" title="创翔网站建设" alt="创翔网站建设">
         <img src="../images/logo.png" alt=""></a>
     </h1>
   </div>
    <div class="fanhui">
-      <a href="/front/"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
-      <a href="/front/news/">新闻资讯</a>
-      <a href="/front/case/">精彩案例</a>
-  	</div>
+      <a href="../"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
+      <a href="../news/">新闻资讯</a>
+      <a href="../case/">精彩案例</a>
+   </div>
   <div class="banner banner1 banner2">
     <!-- <h3>
     <span id="gd-al1">10</span>

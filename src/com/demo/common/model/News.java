@@ -14,6 +14,9 @@ public class News extends BaseNews<News> {
 	 * 所有 sql 与业务逻辑写在 Model 或 Service 中，不要写在 Controller 中，养成好习惯，有利于大型项目的开发与维护
 	 */
 	public Page<News> paginate(int pageNumber, int pageSize) {
+		if(pageNumber <= 0){
+			pageNumber = 1;
+		}
 		return paginate(pageNumber, pageSize, "select *", "from t_news order by news_order,id asc");
 	}
 }

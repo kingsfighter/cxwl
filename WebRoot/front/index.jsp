@@ -230,7 +230,7 @@ var _hmt = _hmt || [];
      
     </ul>
   </div>
-  <a href="news.html" class="zixun" target="_blank">更多资讯</a>
+  <a href="news/" class="zixun" target="_blank">更多资讯</a>
   </div>
 </div>
 <div class="contact-us">

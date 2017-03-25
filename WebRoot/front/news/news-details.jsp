@@ -17,7 +17,9 @@
   <meta name="description" content="<%=c.getHtmlDesc() %>">
   <link rel="stylesheet" href="../style/swiper-3.3.1.min.css">
   <link rel="stylesheet" href="../style/common.css">
-  <link rel="stylesheet" href="../style/index.css"></head>
+  <link rel="stylesheet" href="../style/index.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+ </head>
 <body>
   <div class="logo">
     <h1>

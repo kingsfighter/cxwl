@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../style/swiper-3.3.1.min.css">
   <link rel="stylesheet" href="../style/common.css">
   <link rel="stylesheet" href="../style/index.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 <body class="pc" style="background-image: url(../images/previewbg.jpg);">
  <div class="logo"><h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>

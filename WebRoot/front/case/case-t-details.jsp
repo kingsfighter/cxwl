@@ -36,7 +36,8 @@
       <a href="../news/">新闻资讯</a>
       <a href="../case/">精彩案例</a>
  	</div>
-  <h2 class="title-keywords"><%=c.getTitle() %></h2>
+<!--   <h2 class="title-keywords"><%=c.getTitle() %></h2> -->
+  <div class="title-keywords"><%=c.getTitle() %></div>
   <div id="pics" style="display:none;">
   <%=c.getContent() %>
   </div>

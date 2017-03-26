@@ -17,6 +17,6 @@ public class News extends BaseNews<News> {
 		if(pageNumber <= 0){
 			pageNumber = 1;
 		}
-		return paginate(pageNumber, pageSize, "select *", "from t_news order by news_order,id asc");
+		return paginate(pageNumber, pageSize, "select *", "from t_news order by news_order asc ,modified_date desc");
 	}
 }

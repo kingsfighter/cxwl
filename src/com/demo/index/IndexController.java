@@ -3,11 +3,16 @@ package com.demo.index;
 import com.demo.common.result.Result;
 import com.jfinal.core.Controller;
 import com.jfinal.kit.JsonKit;
+import com.jfinal.kit.PropKit;
 
 /**
  * IndexController
  */
 public class IndexController extends Controller {
+	
+	private static final String USERNAME=PropKit.get("admin.username");
+	private static final String PASSWORD=PropKit.get("admin.password");
+	
     public void index() {
         render("main.jsp");
     }
@@ -16,7 +21,7 @@ public class IndexController extends Controller {
     public void login(){
         String username = getPara("username");
         String password = getPara("password");
-        if("admin".equals(username) && "admin".equals(password)){
+        if(USERNAME.equals(username) && PASSWORD.equals(password)){
             setSessionAttr("login", true);
             Result result = new Result();
             renderText(JsonKit.toJson(result));

@@ -12,8 +12,8 @@ import com.jfinal.plugin.activerecord.Page;
  */
 public class FrontIndexController extends Controller {
 	
-	private static final int CASE_PAGE_SIZE = PropKit.getInt("front.case.list.page.size");
-	private static final int NEWS_PAGE_SIZE = PropKit.getInt("front.news.list.page.size");
+	private static final int CASE_PAGE_SIZE = PropKit.getInt("front.index.case.list.page");
+	private static final int NEWS_PAGE_SIZE = PropKit.getInt("front.index.news.list.page");
 	public void index() {
 		
 		Page<Case> casePage = Case.dao.paginate(1, CASE_PAGE_SIZE);

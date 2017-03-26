@@ -22,7 +22,7 @@ public class CaseController extends Controller {
 
 	public void list() {
 		Page<Case> page = null;
-		page = Case.dao.paginate(getParaToInt(0, 1), 10);
+		page = Case.dao.paginate(getParaToInt("page", 1), 10);
 		renderJson(EasyuiUtil.adapterEasyuiPage(page));
 	}
 

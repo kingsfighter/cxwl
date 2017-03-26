@@ -28,11 +28,22 @@
   <meta name="description" content="创翔网络,做网站，提销量。没有奢华的语言,仅仅为我们这一件事而奋斗！">
   <link rel="stylesheet" href="../style/swiper-3.3.1.min.css">
   <link rel="stylesheet" href="../style/common.css">
+  <link rel="stylesheet" href="../style/jquery.mmenu.all.css">
   <link rel="stylesheet" href="../style/index.css">
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div class="logo"><h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
+	<nav id="menu">
+       <ul>
+         <li><a href="../">首页</a></li>
+         <li><a href="../news/">查看资讯</a></li>
+         <li><a href="../case/">成功案例</a></li>
+         <li><a href="tel:15129014318">拨打电话</a></li>
+       </ul>
+  </nav>	
+  <div class="logo">
+  <a href="#menu" class="s1"><img src="../images/fen.png" alt=""></a>
+  <h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
   <div class="fanhui">
       <a href="../"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
       <a href="../news/">新闻资讯</a>
@@ -191,6 +202,7 @@
   <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
   <script type="text/javascript" src="../js/countUp.js"></script>
   <script type="text/javascript" src="../js/jquery-common.js"></script>
+  <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$(".lei span").tab({
@@ -215,5 +227,10 @@
 			suffix : ''
 		};
 	</script>
+	<script type="text/javascript">
+        $(function(){
+          $("nav#menu").mmenu();
+        })
+    </script>
 </body>
 </html>

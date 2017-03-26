@@ -22,7 +22,7 @@ public class NewsController extends Controller {
 
 	public void list() {
 		Page<News> page = null;
-		page = News.dao.paginate(getParaToInt(0, 1), 10);
+		page = News.dao.paginate(getParaToInt("page", 1), 10);
 		renderJson(EasyuiUtil.adapterEasyuiPage(page));
 	}
 

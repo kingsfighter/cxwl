@@ -18,10 +18,20 @@
   <link rel="stylesheet" href="../style/swiper-3.3.1.min.css">
   <link rel="stylesheet" href="../style/common.css">
   <link rel="stylesheet" href="../style/index.css">
+  <link rel="stylesheet" href="../style/jquery.mmenu.all.css">
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
  </head>
 <body>
+<nav id="menu">
+       <ul>
+         <li><a href="../">首页</a></li>
+         <li><a href="../news/">查看资讯</a></li>
+         <li><a href="../case/">成功案例</a></li>
+         <li><a href="tel:15129014318">拨打电话</a></li>
+       </ul>
+  </nav>
   <div class="logo">
+  <a href="#menu" class="s1"><img src="../images/fen.png" alt=""></a>
     <h1>
       <a href="../" title="创翔网站建设" alt="创翔网站建设">
         <img src="../images/logo.png" alt=""></a>
@@ -53,12 +63,7 @@
     <div class="news-del">
 		<%=c.getContent() %>
     </div>
-    <div class="footer">
-      <div class="w1200">
-        Copyright © 2016-2019 创翔网络 All Rights Reserved. 陕ICP备13002147号-1
-        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5060676'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D5060676%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-      </div>
-    </div>
+    
     <div class="foot-tel">
 	  <ul>
 	    <li><a href="/front/"><img src="../images/ico-s1.png" alt="">首页</a></li>
@@ -67,11 +72,20 @@
 	    <li><a href="tel:15129014318"><img src="../images/ico-s2.png" alt="">拨打电话</a></li>
 	  </ul>
     </div>
+    </div>
+    </div>
+    <div class="footer">
+      <div class="w1200">
+        Copyright © 2016-2019 创翔网络 All Rights Reserved. 陕ICP备13002147号-1
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5060676'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D5060676%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+      </div>
+    </div>
     <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../js/responsiveslides.min.js"></script>
     <script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
     <script type="text/javascript" src="../js/countUp.js"></script>
     <script type="text/javascript" src="../js/jquery-common.js"></script>
+    <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
     <script type="text/javascript">
         $(function(){
             $(".news-list ul li").hover(function() {
@@ -93,6 +107,11 @@
     }]
   }
   with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<script type="text/javascript">
+    $(function(){
+      $("nav#menu").mmenu();
+    })
 </script>
 </body>
   </html>

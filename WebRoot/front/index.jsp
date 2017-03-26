@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style/swiper-3.3.1.min.css">
   <link rel="stylesheet" href="style/common.css">
+  <link rel="stylesheet" href="style/jquery.mmenu.all.css">
   <link rel="stylesheet" href="style/index.css">
 <script>
 var _hmt = _hmt || [];
@@ -27,7 +28,16 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
+	<nav id="menu">
+       <ul>
+         <li><a href="/">首页</a></li>
+         <li><a href="news/">查看资讯</a></li>
+         <li><a href="case/">成功案例</a></li>
+         <li><a href="tel:15129014318">拨打电话</a></li>
+       </ul>
+  </nav>	
   <div class="top">
+  	<a href="#menu" class="s1"><img src="images/fen.png" alt=""></a>
     <div class="w1200">
       <h1><a href="/" title="创翔网站建设" alt="创翔网站建设"><img src="images/logo.png" alt=""></a></h1>
       <div class="tel">咨询热线：<img src="images/phone.png" alt=""><span>15129014318</span></div>
@@ -286,6 +296,7 @@ var _hmt = _hmt || [];
   <script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
   <script type="text/javascript" src="js/jquery-common.js"></script>
+  <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
   <script type="text/javascript">
         $(function(){
   
@@ -366,6 +377,11 @@ var _hmt = _hmt || [];
         });
  
          })   
+    </script>
+    <script type="text/javascript">
+        $(function(){
+          $("nav#menu").mmenu();
+        })
     </script>
 </body>
 </html>

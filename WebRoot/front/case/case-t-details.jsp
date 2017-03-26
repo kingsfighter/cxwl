@@ -15,11 +15,22 @@
   <meta name="description" content="<%=c.getHtmlDesc() %>">
   <link rel="stylesheet" href="../style/swiper-3.3.1.min.css">
   <link rel="stylesheet" href="../style/common.css">
+  <link rel="stylesheet" href="../style/jquery.mmenu.all.css">
   <link rel="stylesheet" href="../style/index.css">
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 <body class="pc">
- <div class="logo"><h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
+<nav id="menu">
+       <ul>
+         <li><a href="../">首页</a></li>
+         <li><a href="../news/">查看资讯</a></li>
+         <li><a href="../case/">成功案例</a></li>
+         <li><a href="tel:15129014318">拨打电话</a></li>
+       </ul>
+  </nav>
+ <div class="logo">
+  <a href="#menu" class="s1"><img src="../images/fen.png" alt=""></a>
+ <h1><a href="../" title="创翔网站建设" alt="创翔网站建设"><img src="../images/logo.png" alt=""></a></h1></div>
  	<div class="fanhui">
       <a href="../"><i><img src="../images/ico-fan.png" alt=""></i>返回首页</a>
       <a href="../news/">新闻资讯</a>
@@ -57,11 +68,13 @@
     </div>
   </div>
   <!-- 上翻 end -->
+  <div class='jiantou'><img src='http://res.70c.com/scene-view/img/btn01_arrow.png'></div>
   <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
   <script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
   <script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
   <script type="text/javascript" src="../js/countUp.js"></script>
   <script type="text/javascript" src="../js/jquery-common.js"></script>
+  <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
   <script type="text/javascript">
   
   		var pics = $("#pics img");
@@ -93,7 +106,7 @@
   		function getMobilePicStr(src){
   			var str = "<div class='swiper-slide'>";
   			str += " <img src='"+src+"' alt=''>";
-  			str += "<div class='jiantou'><img src='http://res.70c.com/scene-view/img/btn01_arrow.png'></div>";
+  			//str += "<div class='jiantou'><img src='http://res.70c.com/scene-view/img/btn01_arrow.png'></div>";
   			str += "</div>";
   			return str;
   		}
@@ -117,6 +130,11 @@
             });
         });
         
+    </script>
+    <script type="text/javascript">
+        $(function(){
+          $("nav#menu").mmenu();
+        })
     </script>
 </body>
 </html>

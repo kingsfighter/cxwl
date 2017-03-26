@@ -17,7 +17,7 @@ public class Case extends BaseCase<Case> {
 		if(pageNumber <= 0){
 			pageNumber = 1;
 		}
-		return paginate(pageNumber, pageSize, "select *", "from t_case order by case_order,id asc");
+		return paginate(pageNumber, pageSize, "select *", "from t_case order by case_order asc, modified_date desc");
 	}
 	/**
 	 * 根据casetype查找
@@ -32,6 +32,6 @@ public class Case extends BaseCase<Case> {
 		}
 		return paginate(pageNumber, pageSize, "select *",
 				"from t_case where case_type = " + caseType
-						+ " order by case_order,id asc");
+						+ " order by case_order asc, modified_date desc");
 	}
 }

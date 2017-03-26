@@ -28,7 +28,7 @@
 </head>
 <body class="easyui-layout">
 	<div data-options="region:'north',border:false"
-		style="height: 60px; background: #B3DFDA; padding: 10px">探矿管理系统</div>
+		style="height: 60px; background: #B3DFDA; padding: 10px">创翔网络管理系统</div>
 	<input type="hidden" id="login"
 		value="<%=session.getAttribute("login")%>"></input>
 	<div data-options="region:'west',split:true,title:'菜单'"

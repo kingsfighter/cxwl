@@ -105,7 +105,7 @@
   		
   		function getMobilePicStr(src){
   			var str = "<div class='swiper-slide'>";
-  			str += " <img src='"+src+"' alt=''>";
+  			str += " <img src='"+src+"' alt=''/>";
   			//str += "<div class='jiantou'><img src='http://res.70c.com/scene-view/img/btn01_arrow.png'></div>";
   			str += "</div>";
   			return str;
